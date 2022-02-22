@@ -1,11 +1,11 @@
 /*
-
+Clase Excepcion cuando no se encuentra la playlist
  */
 package exceptions;
 
 /**
  *
- * @author matia
+ * @author MatiasVeraLima
  */
 public class PlayListNotFoundException extends RuntimeException {
 

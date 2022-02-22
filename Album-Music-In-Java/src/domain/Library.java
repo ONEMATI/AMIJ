@@ -12,20 +12,25 @@ import java.util.function.Supplier;
  *
  * @author MatiasVeraLima
  */
+
 public class Library {
     private static Long idNum=0L;
     private Long id;
     private String libraryName;
     private List<Song> songs;
-    
+    /**
+     * Constructor vacio
+     */
     public Library() {
         this.id = idNum;
         idNum++;
         this.songs = new ArrayList<>();
     }
-
+/**
+ * get and set 
+ */
     public String getLibraryName() {
-        return libraryName;
+        return this.libraryName;
     }
 
     public void setLibraryName(String libraryName) {
@@ -34,7 +39,7 @@ public class Library {
 
 
     public List<Song> getSongs() {
-        return songs;
+        return this.songs;
     }
 
     public void setSongs(List<Song> songs) {
@@ -50,13 +55,17 @@ public class Library {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
-
+/**
+ * Constructor con 
+ * @param nameSong nombre de la cancion
+ * @param songs lista de canciones 
+ */
     public Library(String nameSong, List<Song> songs) {
         this.libraryName = nameSong;
         this.songs = songs;
@@ -68,6 +77,13 @@ public class Library {
     public String toString() {
         return "Library{" + "id=" + id + ", libraryName=" + libraryName + ", songs=" + songs + '}';
     }
+    /**
+     * Metodo envio de cancion por identificador.
+     * Uso API de stream para buscar el id de la cancion para filtrar si existe en la 
+     * biblioteca
+     * @param id identificador de la cancion
+     * @return cancion o mensaje excepcion
+     */
     
     public Song getSongById(Long id){
         return this.songs.stream().filter(s->s.getId().equals(id))

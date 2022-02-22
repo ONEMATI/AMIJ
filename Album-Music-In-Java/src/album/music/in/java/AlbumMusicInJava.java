@@ -17,15 +17,16 @@ import java.util.Scanner;
 public class AlbumMusicInJava {
 
     /**
-     * @param args the command line arguments
+     * @param libraryData bliblioteca de canciones 
+     * @param playlistData lista de musica 
      */
     public static void main(String[] args) throws ParseException {
         int option;
         Scanner input = new Scanner(System.in);
         /*
-        Se utiliza Estructura "Switch", se realizando un menu de Opciones en primera insrtancia,
+        Se utiliza Estructura "Switch", se realizando un menu de Opciones en primera instancia,
         se realizando al lectura de los case segun "option" y al final con el While se evalua
-        si el numero ingresado es distinto de 4 (opcion para salir de menu).
+        si el numero ingresado es distinto de  (opcion para salir de menu).
         Tambien se utiliza SimpleDateFormat para dar formato deseado a la fecha 
          */
         DataAccess<Library> libraryData = new LibraryDB();

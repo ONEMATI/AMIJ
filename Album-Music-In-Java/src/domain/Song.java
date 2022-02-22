@@ -18,13 +18,19 @@ public class Song {
     private String gender;
     private String cover;
     private String description;
-
+/**
+ * Constructor vacio 
+ * inicio id 
+ * auto incrementable
+ */
     public Song() {
         this.id = idNum;
         idNum++;
     }
 
-    
+    /**
+     * get and set
+     */
     public String getTitle() {
         return title;
     }
@@ -80,7 +86,15 @@ public class Song {
     public void setDescription(String description) {
         this.description = description;
     }
-
+/**
+ * Constructor con todos los elementos
+ * @param title titulo de la cancion
+ * @param date fecha de creacion
+ * @param durationInSec duracion en segundos
+ * @param gender genero
+ * @param cover portada
+ * @param description descripcion corta de la cancion
+ */
     public Song(String title, Date date, int durationInSec, String gender, String cover, String description) {
         this.title = title;
         this.date = date;

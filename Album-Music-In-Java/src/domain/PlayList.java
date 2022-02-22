@@ -20,14 +20,18 @@ public class PlayList {
     private String name;
     private int numSong;
     private Date createAt;
-
+/**
+ * constructo vacio
+ */
     public PlayList() {
         this.id = idNum;
         idNum++;
     }
-
+/**
+ * get and set 
+ */
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -35,7 +39,7 @@ public class PlayList {
     }
 
     public List<Song> getPlaylist() {
-        return playlist;
+        return this.playlist;
     }
 
     public void setPlaylist(List<Song> playlist) {
@@ -43,7 +47,7 @@ public class PlayList {
     }
 
     public int getNumSong() {
-        return numSong;
+        return this.numSong;
     }
 
     public void setNumSong(int numSong) {
@@ -51,7 +55,7 @@ public class PlayList {
     }
 
     public Date getCreateAt() {
-        return createAt;
+        return this.createAt;
     }
 
     public void setCreateAt(Date createAt) {
@@ -67,7 +71,7 @@ public class PlayList {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -78,13 +82,18 @@ public class PlayList {
     public String toString() {
         return "PlayList{" + "id=" + id + " ,Nombre=" + name + ", playlist=" + playlist + ", numSong=" + numSong + ", createAt=" + createAt + '}';
     }
-
+/**
+ * Constructor agrega cancion a la playlist
+ * @param song tipo Song 
+ */
     public void addSong(Song song) {
         if (song != null) {
             this.playlist.add(song);
         }
     }
-
+/**
+ * Metodo que agrega cancion con todos los argumentos de la Clase Song
+ */
     public void showSongs() {
         this.playlist.forEach(song -> {
             System.out.print("Id: " + song.getId());
@@ -96,7 +105,10 @@ public class PlayList {
             System.out.println();
         });
     }
-
+/**
+ * Metodo elimina cancion de la playlist
+ * @param songId identificador de la cancion tipo Long
+ */
     public void deleteSong(Long songId) {
         if (songId != null) {
             Song song = this.playlist.stream().filter(s -> s.getId().equals(songId))

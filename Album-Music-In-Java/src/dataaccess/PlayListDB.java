@@ -28,7 +28,9 @@ public class PlayListDB implements DataAccess<PlayList> {
             this.playL.add(objet);
         }
     }
-
+/**
+ * listado usando size (cuantos elementos tiene un arreglo)
+ */
     @Override
     public void list() {
         if (playL.size() > 0) {

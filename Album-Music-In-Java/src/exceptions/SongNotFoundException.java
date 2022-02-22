@@ -1,11 +1,11 @@
 /*
-
+Clase Excepcion cuando no se encuentra la cancion
  */
 package exceptions;
 
 /**
  *
- * @author TammyYMati
+ * @author MatiasVeraLima
  */
 public class SongNotFoundException extends RuntimeException { 
 
