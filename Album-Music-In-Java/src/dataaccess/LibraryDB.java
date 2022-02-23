@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 /**
  *
  * @author MatiasVeraLima
@@ -53,7 +52,12 @@ public class LibraryDB implements DataAccess<Library> {
     public void delete(Long id) {
         
     }
-
+/**
+ * Uso API de stream para buscar el id de la cancion para filtrar si existe en la 
+ biblioteca
+ * @param id identificador de la cancion
+ * @return 
+ */
     @Override
     public Library getById(Long id) {
         return libraries.stream().filter(l->l.getId().equals(id)).findAny().orElse(null);

@@ -107,7 +107,8 @@ public class PlayList {
     }
 /**
  * Metodo elimina cancion de la playlist
- * @param songId identificador de la cancion tipo Long
+ * Uso API de stream para buscar el id de la cancion para filtrar si existe en la playlist.
+ * @param songId identificador de la cancion
  */
     public void deleteSong(Long songId) {
         if (songId != null) {
